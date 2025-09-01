@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hover Effect</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: transparent;
+    }
+    .image-container {
+      position: relative;
+      width: 300px;
+      height: auto;
+      overflow: hidden;
+    }
+    .image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: opacity 0.4s ease;
+    }
+    .grayscale-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+    }
+    .color-image {
+      opacity: 0;
+    }
+    .image-container:hover .grayscale-image {
+      opacity: 0;
+    }
+    .image-container:hover .color-image {
+      opacity: 1;
+    }
+    .link-wrapper {
+      text-decoration: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<a href="https://partner.whiteningnet.tw" class="link-wrapper">
+  <div class="image-container">
+    <img src="https://res.cloudinary.com/dslyfvqvj/image/upload/v1756710642/wnadmin2_pmuvw6.png" alt="Grayscale Image" class="grayscale-image">
+    <img src="https://res.cloudinary.com/dslyfvqvj/image/upload/v1756710642/wnadmin_tlqyun.png" alt="Color Image" class="color-image">
+  </div>
+</a>
+
+</body>
+</html>
